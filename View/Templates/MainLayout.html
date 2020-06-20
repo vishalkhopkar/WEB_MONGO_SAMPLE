@@ -1,0 +1,23 @@
+$def with (page)
+$var css: static/css/bootstrap.min.css static/scss/bootstrap-material-design.scss
+$var js: static/js/jquery-3.5.1.min.js static/js/bootstrap.min.js static/js/ripples.js static/js/material.min.js static/js/dadar.js
+
+<html lang="en">
+<!--Keep the css and js files in static folder only-->
+<head>
+    <meta charset="UTF-8">
+    <title>Sampark Kranti Express</title>
+    $if self.css:
+        $for style in self.css.split():
+            <link rel="stylesheet" href="$style"/>
+</head>
+<body>
+    <div id="app">
+        $:page
+
+    </div>
+    $if self.js:
+        $for file in self.js.split():
+            <script src="$file"></script>
+</body>
+</html>

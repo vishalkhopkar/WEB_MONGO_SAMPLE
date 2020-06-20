@@ -1,0 +1,17 @@
+$if session["username"] is None:
+    <h1>Please login/register to continue</h1>
+    <br/>
+    <ul>
+        <li><a id="login_link" href="login">Login</a></li>
+        <li><a id="register_link" href="register">Register</a></li>
+    </ul>
+
+
+$else:
+    <h1>Hello $session["username"]</h1>
+<br/>
+<h2>Read our blogs:</h2>
+<ul>
+    <li><a href="https://www.wikipedia.org">BLOG 1</a></li>
+    <li><a href="Blog2.html">BLOG 2</a></li>
+</ul>
